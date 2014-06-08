@@ -24,11 +24,12 @@ Create folder on your host machine to store configuration for dockerui container
 
 1. Create your own `.htpasswd` file at dockerui folder (e.g. ~/dockerui/.htpasswd)
 2. Generate new credentials
-- via `htpasswd` shell command
-```
-htpasswd -c ~/dockerui/.htpasswd [username]
-```
-- or via one of these websites [htpasswd generators](http://goo.gl/yLfKmV) (opens google search)
+	- via `htpasswd` shell command
+	```
+	htpasswd -c ~/dockerui/.htpasswd [username]
+	```
+	- or via one of these websites [htpasswd generators](http://goo.gl/yLfKmV) (opens google search)
+
 3. Run dockerui container with additional parameter `-v ~/dockerui/.htpasswd:/app/.htpasswd`
 
 ### Replace SSL certificates
