@@ -36,9 +36,9 @@ Create folder on your host machine to store configuration for dockerui container
 
 1. Create folder for SSL certificates inside dockerui folder `~/dockerui/ssl`
 2. Generate new certificates
-```
-openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=US/ST=Unknown/L=Unknown/O=Dis/CN=localhost" -keyout ~/dockerui/ssl/server.key  -out ~/dockerui/ssl/server.crt
-```
-*PLEASE NOTE: Key and certificate file names (`server.key` and `server.crt`) should not be changed*
+	```
+	openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=US/ST=Unknown/L=Unknown/O=Dis/CN=localhost" -keyout ~/dockerui/ssl/server.key  -out ~/dockerui/ssl/server.crt
+	```
+	**PLEASE NOTE: Key and certificate file names (`server.key` and `server.crt`) should not be changed**
 
 3. Run dockerui with additional parameter `-v ~/dockerui/ssl:/etc/nginx/ssl`
